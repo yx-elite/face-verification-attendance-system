@@ -160,7 +160,8 @@ def recognize_face(db_faces, username, frame, x, y, w, h):
 def save_face_img(username, directory, face):
     img_path = os.path.join(directory, f'{username}.jpg')
     cv2.imwrite(img_path, face)
-    print(f"Saved image: '{img_path [5:]}'")
+    print(f"Saved image: '{img_path [12:]}'")
+    print("--------------------------------------------------------")
 
 # Function to capture a valid face
 def face_valid_capture(capture, directory, username):
@@ -192,7 +193,7 @@ def face_valid_capture(capture, directory, username):
 # Main function
 def main():
     global global_threshold
-    username = 'Lan Yi Xian'
+    username = 'Lee Jia Min'
     temp_dir = './data/temp'
     mkdir(temp_dir)
     webcam = initialize_webcam()
